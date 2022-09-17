@@ -75,12 +75,12 @@ public class Silly implements Comparable<Silly>{
 
     /**
      * Creates a new Silly Object
-     * The constructor takes in two Strings as the arguements
+     * The constructor takes in two Strings as the arguments
      * @param s1 is the first string
      * @param s2 is the second string
      */
     public Silly(String s1, String s2) {
-        this.name = s1 + " " + s2;
+        this.name = s1 + s2;
     }
 
 
@@ -116,8 +116,7 @@ public class Silly implements Comparable<Silly>{
         y.countStatic();
         x.countStatic();
         x.countStatic();
-        int[] expected_values = {1, 2, 3, 4};
-        // TODO or it could be {0, 1, 2, 3}
+        int[] expected_values = {0, 1, 2, 3};
 
         System.out.println("The countStatic calls will return " + Arrays.toString(expected_values));
     }
