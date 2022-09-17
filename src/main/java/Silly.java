@@ -181,25 +181,15 @@ public class Silly implements Comparable<Silly>{
      */
     @Override
     public int compareTo(Silly other) {
-        /**
-         * TODO (Task 5): Implement the body of this method.
-         *                A positive number should be returned if this.name
-         *                is longer than other.name, a negative number if
-         *                other.name is longer than this.name, and 0 if
-         *                the lengths are equal.
-         *                You can get the length of a string by using the
-         *                .length() method.
-         */
+
+        if (this.name.length() > other.name.length()) {
+            return 1;
+        } else if (this.name.length() == other.name.length()) {
+            return 0;
+        } else {
+            return -1;
+        }
+     }
     }
 
-    /*
-     * TODO (Task 6): Submit the changes you made on GitHub!
-     *                When you submit it, go to the 'Actions' tab. You should
-     *                be able to see this exercise being autograded!
-     *
-     *                You can click on the ongoing action to see more details.
-     *                If the tests don't pass, look at the results and revise
-     *                accordingly.
-     */
-}
 
