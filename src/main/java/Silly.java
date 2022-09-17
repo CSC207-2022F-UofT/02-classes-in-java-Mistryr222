@@ -72,16 +72,16 @@ public class Silly implements Comparable<Silly>{
         this.name = "Silly #" + number;
     }
 
+
     /**
-     * TODO (Task 1): Create another constructor that takes in TWO parameters,
-     *       both of which are strings.
-     *       Afterwards, set this.name to the concatenation of both
-     *       strings (e.g. this.name = [first string] + [second string]).
-     *       Make sure you document this method!
+     * Creates a new Silly Object
+     * The constructor takes in two Strings as the arguements
+     * @param s1 is the first string
+     * @param s2 is the second string
      */
-
-
-
+    public Silly(String s1, String s2) {
+        this.name = s1 + " " + s2;
+    }
 
 
     public static void main(String[] args) {
@@ -116,7 +116,8 @@ public class Silly implements Comparable<Silly>{
         y.countStatic();
         x.countStatic();
         x.countStatic();
-        int[] expected_values = {};
+        int[] expected_values = {1, 2, 3, 4};
+        // TODO or it could be {0, 1, 2, 3}
 
         System.out.println("The countStatic calls will return " + Arrays.toString(expected_values));
     }
@@ -133,7 +134,7 @@ public class Silly implements Comparable<Silly>{
      */
     @Override
     public String toString(){
-        // TODO (Task 3): Implement the body of this method!
+        return this.name;
     }
 
     /**
@@ -148,19 +149,14 @@ public class Silly implements Comparable<Silly>{
      */
     @Override
     public boolean equals(Object o) {
-        /**
-         * TODO (Task 4): Complete the body of this method!
-         *                We've started it by checking the type of o for you.
-         *                You just need to return true if the names are equal.
-         */
+
         if (!(o instanceof Silly)){
             return false;
         }
 
         Silly other = (Silly) o; // To access .name of o, we need to cast it.
 
-        // Hint: to compare strings, we need to use .equals()
-        //       e.g. s1.equals(s2)
+        return this.name.equals(other.name);
     }
 
     /**
